@@ -64,3 +64,19 @@ docker run --rm -p 8000:8000 taskflow
 
 <!-- Lab J1 : listez les règles activées sur main, pourquoi chacune, et ajoutez la capture du push refusé -->
 À compléter.
+
+## Ce que la pipeline vérifie
+
+La pipeline CI GitHub Actions est conçue pour protéger la branche principale avant tout merge.
+Elle lance deux contrôles en parallèle sur chaque PR et sur chaque push vers la branche principale :
+
+- le lint avec Ruff
+- les tests avec Pytest
+
+Le but est simple : une PR ne peut pas être fusionnée si au moins un de ces contrôles échoue.
+Cela permet de garder la branche `main` stable, de détecter rapidement les régressions et d'éviter d'intégrer du code qui n'a pas été validé.
+
+DONC :
+code de qualité et tests qui fonctionnent et qui existent
+
+Rend les merges fiables

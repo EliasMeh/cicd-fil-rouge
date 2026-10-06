@@ -77,4 +77,7 @@ jobs:
     name: CI OK
     needs: [lint, test]
     runs-on: ubuntu-latest
+    steps:
+      - name: Confirm all checks passed
+        run: echo "Lint and tests passed successfully."
 

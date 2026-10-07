@@ -89,6 +89,22 @@ Ces règles permettent de s’assurer qu’aucun changement non vérifié n’es
 
 ![Merge validé après la CI](docs/screenshots/image%20copy%204.png)
 
+### Règle de protection supplémentaire
+
+![Protection supplémentaire GitHub](docs/screenshots/image%20copy%205.png)
+
+### Contrôle de la branche principale
+
+![Contrôle de la branche principale](docs/screenshots/image%20copy%206.png)
+
+### Vérification avant merge
+
+![Validation avant merge](docs/screenshots/image%20copy%207.png)
+
+### État final de la protection
+
+![État final de la protection](docs/screenshots/image%20copy%208.png)
+
 ## Ce que la pipeline vérifie
 
 La pipeline CI GitHub Actions est conçue pour protéger la branche principale avant tout merge.

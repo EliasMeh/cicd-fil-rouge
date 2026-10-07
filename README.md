@@ -56,14 +56,54 @@ docker run --rm -p 8000:8000 taskflow
 | `NOTIFY_WEBHOOK_URL` | Webhook appelé à chaque création de tâche | vide (désactivé) |
 
 ## Équipe
-
-<!-- Lab J1 : remplacez par les noms du binôme -->
-- À compléter
+Elias MEHDAOUI
 
 ## Gouvernance du dépôt
 
-<!-- Lab J1 : listez les règles activées sur main, pourquoi chacune, et ajoutez la capture du push refusé -->
-À compléter.
+Sur la branche `main`, plusieurs protections ont été activées pour sécuriser le dépôt :
+
+- `Require pull request before merging` : un code validé par une PR doit être relu avant d’être fusionné.
+- `Require status checks to pass before merging` : la CI doit être verte (lint + tests) avant toute merge.
+- `Require branches to be up to date before merging` : la branche doit être synchronisée avec `main` avant fusion.
+- `Do not allow force pushes` : cela évite les réécritures de l’historique et les suppressions accidentelles.
+
+Ces règles permettent de s’assurer qu’aucun changement non vérifié n’est intégré dans la branche principale.
+
+### Exemple de push refusé
+
+![Push refusé sur main](docs/screenshots/image.png)
+
+### Vérification des règles de protection
+
+![Règles GitHub Branch protection](docs/screenshots/image%20copy.png)
+
+### Vérification du statut de la CI
+
+![Status checks GitHub Actions](docs/screenshots/image%20copy%202.png)
+
+### PR bloquée par la CI
+
+![Pull request bloquée](docs/screenshots/image%20copy%203.png)
+
+### Validation du merge final
+
+![Merge validé après la CI](docs/screenshots/image%20copy%204.png)
+
+### Règle de protection supplémentaire
+
+![Protection supplémentaire GitHub](docs/screenshots/image%20copy%205.png)
+
+### Contrôle de la branche principale
+
+![Contrôle de la branche principale](docs/screenshots/image%20copy%206.png)
+
+### Vérification avant merge
+
+![Validation avant merge](docs/screenshots/image%20copy%207.png)
+
+### État final de la protection
+
+![État final de la protection](docs/screenshots/image%20copy%208.png)
 
 ## Ce que la pipeline vérifie
 
